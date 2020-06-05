@@ -1,0 +1,20 @@
+﻿
+
+<h1>Dojo Survey!</h1>
+
+    @model Survey
+    <form asp-action="Process" asp-controller="Home" method="post">
+        <span asp-validation-for="Name"></span><br>
+        <label asp-for="Name"></label>
+        <input asp-for="Name"><br>
+        <span asp-validation-for="Location"></span><br>
+        <label asp-for="Location"></label>
+        <select asp-for="Location" asp-items="Model.Locations"></select><br>
+        <span asp-validation-for="Language"></span><br>
+        <label asp-for="Language"></label>
+        <select asp-for="Language" asp-items="Model.Languages"></select><br>
+        <span asp-validation-for="Comment"></span><br>
+        <label asp-for="Comment"></label>
+        <input asp-for="Comment"><br><br>
+        <input value="Submit Survey" type="submit">    
+    </form>
